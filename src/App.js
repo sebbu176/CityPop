@@ -4,6 +4,7 @@ import Header from './components/Header'
 import StartView from './components/StartView'
 import axios from 'axios'
 import Search from './components/Search'
+import PopulationResult from './components/PopulationResult'
 
 class App extends Component {
   state = {
@@ -16,7 +17,7 @@ class App extends Component {
       .get(
         `http://api.geonames.org/searchJSON?name=${inpuText}&maxRows=1&username=weknowit&orderby=population&cities=cities1000`
       )
-      .then(res => this.setState({ result: res.data.geonames[0], showSearchCity: false, showResultBox: true }))
+      .then(res => this.setState({ result: res.data.geonames[0]}))
       .catch(error => console.log(error))
   }
 
@@ -42,6 +43,7 @@ class App extends Component {
         <StartView />
         <Search onSubmit={this.handleSearchCountry} title={'Search by country'} placeholder={'Enter a country'} />
         <Search onSubmit={this.handleSearchCity} title={'Search by city'} placeholder={'Enter a city'} />
+        <PopulationResult result={this.state.result} />
       </div>
     )
   }
