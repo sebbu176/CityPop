@@ -5,13 +5,18 @@ import StartView from './components/StartView'
 import axios from 'axios'
 import Search from './components/Search'
 import PopulationResult from './components/PopulationResult'
-
+import CountryResult from './components/CountryResult'
 class App extends Component {
   state = {
     results: [],
     result: [],
     country: ''
   }
+
+  onclick = clickObject => {
+    this.setState({ result: clickObject })
+  }
+  
   handleSearchCity = inpuText => {
     axios
       .get(
@@ -44,6 +49,7 @@ class App extends Component {
         <Search onSubmit={this.handleSearchCountry} title={'Search by country'} placeholder={'Enter a country'} />
         <Search onSubmit={this.handleSearchCity} title={'Search by city'} placeholder={'Enter a city'} />
         <PopulationResult result={this.state.result} />
+        <CountryResult results={this.state.results} country={this.state.country} onclick={this.onclick} />
       </div>
     )
   }
