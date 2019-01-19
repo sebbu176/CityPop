@@ -8,7 +8,7 @@ export class StartView extends Component {
       render() {
         return (
           <div style={divStyle}>
-            <Alternative style={{ marginRight: '20rem' }} title={this.state.city}  link={this.props.link1} />
+            <Alternative title={this.state.city}  link={this.props.link1} />
             <Alternative title={this.state.country} link={this.props.link2}  />
           </div>
         )
