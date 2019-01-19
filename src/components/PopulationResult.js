@@ -7,7 +7,7 @@ export class PopulationResult extends Component {
         <h3>{this.props.result.name}</h3>
         <div style={{border: 'solid'}}>
         <p>Population</p>
-        <h2>{this.props.result.population}</h2>
+        <h2>{this.props.result.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</h2>
         </div>
       </div>
     )
