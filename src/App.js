@@ -47,7 +47,7 @@ class App extends Component {
 
   handleSearchCountry = inpuText => {
     axios
-      .get(`https://restcountries.eu/rest/v2/name/${inpuText}?fullText=true`)
+      .get(`https://restcountries.eu/rest/v2/name/${inpuText}`)
       .then(res =>
         axios.get(
           `http://api.geonames.org/searchJSON?country=${
