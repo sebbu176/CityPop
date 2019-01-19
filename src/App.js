@@ -74,45 +74,55 @@ class App extends Component {
           <div className="container">
             <Header reset={this.reset} />
             <div>
-              {this.state.showNoResult && <NoResult />}
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <React.Fragment>
-                    <StartView reset={this.reset} link1={'/searchbycity'} link2={'/searchbycountry'} />
-                  </React.Fragment>
-                )}
-              />
-              <Route
-                path="/searchbycountry"
-                render={props => (
-                  <React.Fragment>
-                    {this.state.showSearchCountry && (
-                      <Search
-                        onSubmit={this.handleSearchCountry}
-                        title={'Search by country'}
-                        placeholder={'Enter a country'}
-                      />
-                    )}
-                    {this.state.showCountryResult && (
-                      <CountryResult results={this.state.results} country={this.state.country} onclick={this.onclick} />
-                    )}
-                    {this.state.showPopulationResult && <PopulationResult result={this.state.result} />}
-                  </React.Fragment>
-                )}
-              />
-              <Route
-                path="/searchbycity"
-                render={props => (
-                  <React.Fragment>
-                    {this.state.showSearchCity && (
-                      <Search onSubmit={this.handleSearchCity} title={'Search by city'} placeholder={'Enter a city'} />
-                    )}
-                    {this.state.showPopulationResult && <PopulationResult result={this.state.result} />}
-                  </React.Fragment>
-                )}
-              />
+              <div className="center">
+                {this.state.showNoResult && <NoResult />}
+                <Route
+                  exact
+                  path="/"
+                  render={props => (
+                    <React.Fragment>
+                      <StartView reset={this.reset} link1={'/searchbycity'} link2={'/searchbycountry'} />
+                    </React.Fragment>
+                  )}
+                />
+                <Route
+                  path="/searchbycountry"
+                  render={props => (
+                    <React.Fragment>
+                      {this.state.showSearchCountry && (
+                        <Search
+                          onSubmit={this.handleSearchCountry}
+                          title={'Search by country'}
+                          placeholder={'Enter a country'}
+                        />
+                      )}
+                      {this.state.showCountryResult && (
+                        <CountryResult
+                          results={this.state.results}
+                          country={this.state.country}
+                          onclick={this.onclick}
+                        />
+                      )}
+                      {this.state.showPopulationResult && <PopulationResult result={this.state.result} />}
+                    </React.Fragment>
+                  )}
+                />
+                <Route
+                  path="/searchbycity"
+                  render={props => (
+                    <React.Fragment>
+                      {this.state.showSearchCity && (
+                        <Search
+                          onSubmit={this.handleSearchCity}
+                          title={'Search by city'}
+                          placeholder={'Enter a city'}
+                        />
+                      )}
+                      {this.state.showPopulationResult && <PopulationResult result={this.state.result} />}
+                    </React.Fragment>
+                  )}
+                />
+              </div>
             </div>
           </div>
         </div>

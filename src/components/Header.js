@@ -14,12 +14,12 @@ render() {
 
 
 const headerStyle = {
-    color: '#333',
+    color: '#fff',
     textAlign: 'center',
     padding: '10px'
   }
   const linkStyle = {
-    color: '#333',
+    color: '#fff',
     textDecoration: 'none'
   }
 

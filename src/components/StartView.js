@@ -18,7 +18,8 @@ export class StartView extends Component {
     const divStyle = {
       display: 'flex',
       flexDirection: 'row',
-      textAlign: 'center'
+      textAlign: 'center',
+      color: '#fff'
     }
 
 export default StartView

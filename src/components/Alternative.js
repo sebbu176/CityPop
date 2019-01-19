@@ -7,7 +7,7 @@ export class Alternative extends Component {
       return (
         <div style={{border: 'solid', flexBasis: '100%'}}>
           <Link style={{textDecoration: 'none'}}to={this.props.link} >
-          <h2 style={{color: '#333'}}>{title}</h2>
+          <h2 style={{color: '#fff'}}>{title}</h2>
           </Link>
         </div>
       )

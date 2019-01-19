@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class PopulationResult extends Component {
   render() {
     return (
-      <div style={{textAlign:'center', width: '40%', margin: 'auto'}}>
+      <div style={{textAlign:'center', width: '40%', margin: 'auto' , color: '#FFF'}}>
         <h3>{this.props.result.name}</h3>
         <div style={{border: 'solid'}}>
         <p>Population</p>

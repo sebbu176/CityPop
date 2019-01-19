@@ -4,3 +4,10 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    right: 25%;
+}
