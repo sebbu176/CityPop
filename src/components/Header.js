@@ -16,6 +16,7 @@ render() {
 const headerStyle = {
     color: '#fff',
     textAlign: 'center',
+    fontSize: '40px'
   }
   const linkStyle = {
     color: '#fff',
