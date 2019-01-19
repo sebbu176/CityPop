@@ -11,6 +11,16 @@ class App extends Component {
     result: [],
     country: ''
   }
+  handleSearchCity = inpuText => {
+    axios
+      .get(
+        `http://api.geonames.org/searchJSON?name=${inpuText}&maxRows=1&username=weknowit&orderby=population&cities=cities1000`
+      )
+      .then(res => this.setState({ result: res.data.geonames[0], showSearchCity: false, showResultBox: true }))
+      .catch(error => console.log(error))
+  }
+
+  
   handleSearchCountry = inpuText => {
     axios
       .get(`https://restcountries.eu/rest/v2/name/${inpuText}?fullText=true`)
@@ -31,6 +41,7 @@ class App extends Component {
         <Header />
         <StartView />
         <Search onSubmit={this.handleSearchCountry} title={'Search by country'} placeholder={'Enter a country'} />
+        <Search onSubmit={this.handleSearchCity} title={'Search by city'} placeholder={'Enter a city'} />
       </div>
     )
   }
