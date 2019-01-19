@@ -19,7 +19,8 @@ export class StartView extends Component {
       display: 'flex',
       flexDirection: 'row',
       textAlign: 'center',
-      color: '#fff'
+      color: '#fff',
+      marginTop: '20%'
     }
 
 export default StartView

@@ -5,7 +5,7 @@ import NoResult from './NoResult';
 export class SearchResult extends Component {
   render() {
     return (
-      <div style={{ margin: 'auto', textAlign: 'center', width: '200px'}}>
+      <div style={{ margin: 'auto', textAlign: 'center', width: '200px', color: '#fff'}}>
         {this.props.results.length === 0 ? (
           <NoResult />
         ) : (

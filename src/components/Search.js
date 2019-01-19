@@ -19,12 +19,12 @@ export class Search extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} style={{ textAlign: 'center', color: '#fff' }}>
+      <form onSubmit={this.handleSubmit} style={{ textAlign: 'center', color: '#fff', marginTop: '5%' }}>
         <h3>{this.props.title}</h3>
         <input
           type="text"
           placeholder={this.props.placeholder}
-          style={{ margin: 'auto', display: 'block', textAlign: 'center', border: 'solid', width: '30%', paddingTop: '1%', paddingBottom: '1%'}}
+          style={{ margin: '5% auto 3% auto', display: 'block', textAlign: 'center', border: 'solid', width: '30%', paddingTop: '1%', paddingBottom: '1%'}}
           onChange={this.onChange}
         />
         <button
