@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   onclick = clickObject => {
-    this.setState({ result: clickObject })
+    this.setState({ result: clickObject, showPopulationResult: true, showCountryResult: false })
   }
 
   handleSearchCity = inpuText => {
