@@ -92,7 +92,7 @@ class App extends Component {
                       {this.state.showSearchCountry && (
                         <Search
                           onSubmit={this.handleSearchCountry}
-                          title={'Search by country'}
+                          title={'SEARCH BY COUNTRY'}
                           placeholder={'Enter a country'}
                         />
                       )}
@@ -114,7 +114,7 @@ class App extends Component {
                       {this.state.showSearchCity && (
                         <Search
                           onSubmit={this.handleSearchCity}
-                          title={'Search by city'}
+                          title={'SEARCH BY CITY'}
                           placeholder={'Enter a city'}
                         />
                       )}

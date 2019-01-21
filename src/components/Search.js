@@ -24,7 +24,7 @@ export class Search extends Component {
         <input
           type="text"
           placeholder={this.props.placeholder}
-          style={{ margin: '5% auto 3% auto', display: 'block', textAlign: 'center', border: 'solid', width: '30%', paddingTop: '1%', paddingBottom: '1%'}}
+          style={{ margin: '5% auto 3% auto', display: 'block', textAlign: 'center', border: 'solid', width: '80%', paddingTop: '1%', paddingBottom: '1%'}}
           onChange={this.onChange}
         />
         <button
