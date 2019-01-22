@@ -19,6 +19,7 @@ class App extends Component {
     showPopulationResult: false,
     showNoResult: false
   }
+  // Reset, do as the function says reset the state to the same value as it start with
   reset = () => {
     this.setState({
       results: [],
@@ -32,10 +33,12 @@ class App extends Component {
     })
   }
 
+  // This function is used when the countryobjects are clicked, and then sets the state to appropiate values.
   onclick = clickObject => {
     this.setState({ result: clickObject, showPopulationResult: true, showCountryResult: false })
   }
 
+  // Handlesearchcity is called when doing a search by city, and does a request to geonames.
   handleSearchCity = inpuText => {
     axios
       .get(
@@ -44,7 +47,7 @@ class App extends Component {
       .then(res => this.setState({ result: res.data.geonames[0], showSearchCity: false, showPopulationResult: true }))
       .catch(error => this.setState({ showNoResult: true, showSearchCity: false }))
   }
-
+  // HandlesearchCountry is called when doing a search by country, first it does a request to restcountries to get the country which is used when doing the next request to geonames.
   handleSearchCountry = inpuText => {
     axios
       .get(`https://restcountries.eu/rest/v2/name/${inpuText}`)
