@@ -10,7 +10,7 @@ export class SearchResult extends Component {
           <NoResult />
         ) : (
           <div>
-            <h3>{this.props.country}</h3>
+            <h1>{this.props.country}</h1>
             {this.props.results.map(result => (
               <CityBox onclick={this.props.onclick} key={result.geonameId} result={result} />
             ))}

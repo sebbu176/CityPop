@@ -6,7 +6,7 @@ export class CityBox extends Component {
     }
   render() {
     return (
-      <div onClick={this.onItemClick} style={{border: 'solid', marginTop: '5px' , paddingTop: '5%', paddingBottom: '5%'}}>
+      <div onClick={this.onItemClick} style={{border: 'solid', marginTop: '5px' , paddingTop: '15%', paddingBottom: '15%'}}>
         {this.props.result.name}
       </div>
     )
